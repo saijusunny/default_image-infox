@@ -36,7 +36,7 @@
                     <input type="text"  name="username" value="{{products.username}}" class="form-control"><br>
                     <input type="password"  name="password" value="{{products.password}}" class="form-control"><br>
                     <input type="password"  name="repassword" value="{{products.repassword}}" class="form-control"><br>
-                    <label>Image:</label>
+                    <label style="color: white;">Image:</label>
                     {% if products.image == 'static/image/icon.png'%}
                     <td>
                     <img src="{% static 'image/icon.png' %}" class="w-25" >
@@ -45,6 +45,7 @@
                     <td>
                     <img src="{{ products.image.url }}" class="w-25" >
                     </td>
+                    <br>
                     {%endif%}
                     <input type="file" placeholder="Image" name="file" class="form-control" accept ='image/'><br>
 

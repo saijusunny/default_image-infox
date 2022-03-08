@@ -23,7 +23,7 @@
 
 <body>
     <div class="container">
-        <div class="row">
+        <div class="row" style="text-align: center;">
             <div class="col-sm-8">
 
                 <h1>Signup Section</h1>
@@ -38,9 +38,10 @@
                     <input type="password" placeholder="Re-enter Password" name="repassword" class="form-control"><br>
                     <input type="file" placeholder="Image" name="file" class="form-control" accept ='image/'><br>
                     <input type="email" placeholder="Email" name="email" class="form-control"><br>
-                    <input type="submit" value="Signup" class="btn btn-light">
+                    <input type="submit" value="Signup" class="btn btn-light"><br>
 
                 </form>
+                <br>
                 <a href="{% url 'view' %}"><input type="submit" value="view" class="btn btn-light"></a>
 
 

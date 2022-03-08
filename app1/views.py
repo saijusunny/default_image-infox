@@ -55,9 +55,11 @@ def edit_details(request,pk):
         products.username=request.POST.get('username')
         products.password=request.POST.get('password')
         products.repassword=request.POST.get('repassword')
+        products.email=request.POST.get('email')
         # if len(products.image)>0:
         #     os.remove(products.image.path)
         if request.FILES.get('file') is not None:
+            print('hai')
             if not products.image =="static/image/icon.png":
                 os.remove(products.image.path)
                 products.image = request.FILES['file']
@@ -65,8 +67,8 @@ def edit_details(request,pk):
                 products.image = request.FILES['file']
         else:
             os.remove(products.image.path)
-            products.image =="static/image/icon.png"
-        products.email=request.POST.get('email')
+            products.image ="static/image/icon.png"
+        
         products.save()
         return redirect('view')
     return render(request, 'edit.html')
